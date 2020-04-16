@@ -79,7 +79,7 @@ export class Notification extends React.PureComponent {
     });
 
     return (
-      <div className={containerTypeClass}>
+        <div className={containerTypeClass}>
         {icon ? <span className={styles.icon}>{icon}</span> : false}
         <div className={this._getStyle('content')}>
           <div className={this._getStyle('item__message')}>{message}</div>
@@ -90,8 +90,7 @@ export class Notification extends React.PureComponent {
                   className={this._getStyle('actionBtn')}
                   onClick={(e) => {
                     acceptBtn.handler(e, this.props);
-                  }}
-                >
+                  }}>
                   {acceptBtn.icon && typeof acceptBtn.icon === 'string' ? (
                     <i className={acceptBtn.icon} />
                   ) : (
@@ -107,8 +106,7 @@ export class Notification extends React.PureComponent {
                   className={this._getStyle('actionBtn')}
                   onClick={(e) => {
                     denyBtn.handler(e, this.props);
-                  }}
-                >
+                  }}>
                   {denyBtn.icon && typeof denyBtn.icon === 'string' ? (
                     <i className={denyBtn.icon} />
                   ) : (
@@ -128,7 +126,7 @@ export class Notification extends React.PureComponent {
           <div
             className={this._getStyle('close')}
             onClick={() => handleDismiss(id)}
-          />
+          ></div>
         ) : (
           false
         )}
@@ -143,7 +141,8 @@ export class Notification extends React.PureComponent {
           false
         )}
       </div>
-    );
+
+  );
   }
 }
 
